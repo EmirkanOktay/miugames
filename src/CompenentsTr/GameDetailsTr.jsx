@@ -9,7 +9,9 @@ function GameDetailsTr() {
     const location = useLocation();
     const currentPath = location.pathname.replace("/gametr", "/game");
 
-    const game = gamesData.find((g) => g.routeToPage === currentPath || g.routeToPageTr === location.pathname);
+    const game = gamesData.find(
+        (g) => g.routeToPage === currentPath || g.routeToPageTr === location.pathname
+    );
 
     if (!game) {
         return (
@@ -52,22 +54,62 @@ function GameDetailsTr() {
                     {game.descriptionTr}
                 </motion.p>
 
-                <motion.a
-                    href={game.playLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 rounded-full font-semibold text-lg"
-                    style={{
-                        backgroundColor: "rgb(245,215,150)",
-                        color: "rgb(50,20,100)",
-                        transition: "0.3s",
-                        boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
-                    }}
-                >
-                    Google Play'de Oyna
-                </motion.a>
+                {game.Android && (
+                    <motion.a
+                        href={game.playLinkAndroid}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 rounded-full font-semibold text-lg mb-4"
+                        style={{
+                            backgroundColor: "rgb(245,215,150)",
+                            color: "rgb(50,20,100)",
+                            transition: "0.3s",
+                            boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
+                        }}
+                    >
+                        Google Play'de Oyna
+                    </motion.a>
+                )}
+
+                {game.iOS && (
+                    <motion.a
+                        href={game.playLinkIos}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 rounded-full font-semibold text-lg mb-4"
+                        style={{
+                            backgroundColor: "rgb(245,215,150)",
+                            color: "rgb(50,20,100)",
+                            transition: "0.3s",
+                            boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
+                        }}
+                    >
+                        App Store'da Oyna
+                    </motion.a>
+                )}
+
+                {game.Steam && (
+                    <motion.a
+                        href={game.playLinkSteam}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 rounded-full font-semibold text-lg"
+                        style={{
+                            backgroundColor: "rgb(245,215,150)",
+                            color: "rgb(50,20,100)",
+                            transition: "0.3s",
+                            boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
+                        }}
+                    >
+                        Steam'de Oyna
+                    </motion.a>
+                )}
             </div>
             <FooterTr />
         </div>

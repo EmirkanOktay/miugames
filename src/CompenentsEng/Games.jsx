@@ -29,19 +29,6 @@ function Games() {
                                 <p className="text-sm" style={{ color: "rgb(245,215,150)" }}>
                                     {game.descriptionShort}
                                 </p>
-                                <a
-                                    href={game.playLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block mt-3 px-4 py-2 rounded-lg text-center"
-                                    style={{
-                                        backgroundColor: "rgb(245,215,150)",
-                                        color: "rgb(50,20,100)",
-                                        fontWeight: "bold",
-                                    }}
-                                >
-                                    Play on Google Play
-                                </a>
                                 <Link
                                     to={game.routeToPage}
                                     className="block mt-3 px-4 py-2 rounded-lg text-center"
@@ -51,7 +38,7 @@ function Games() {
                                         fontWeight: "bold",
                                     }}
                                 >
-                                    {game.buttonEng}
+                                    {game.button}
                                 </Link>
                             </div>
 
@@ -67,19 +54,6 @@ function Games() {
                                 <p className="text-sm mb-4" style={{ color: "rgb(245,215,150)" }}>
                                     {game.descriptionShort}
                                 </p>
-                                <a
-                                    href={game.playLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-4 py-2 mb-2 rounded-lg transition"
-                                    style={{
-                                        backgroundColor: "rgb(245,215,150)",
-                                        color: "rgb(50,20,100)",
-                                        fontWeight: "bold",
-                                    }}
-                                >
-                                    Play on Google Play
-                                </a>
                                 <Link
                                     to={game.routeToPage}
                                     className="px-5 py-2 rounded-lg transition"
@@ -89,7 +63,7 @@ function Games() {
                                         fontWeight: "bold",
                                     }}
                                 >
-                                    {game.buttonEng}
+                                    {game.button}
                                 </Link>
                             </motion.div>
                         </div>

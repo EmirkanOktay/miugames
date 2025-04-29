@@ -29,19 +29,6 @@ function GamesTr() {
                                 <p className="text-sm" style={{ color: "rgb(245,215,150)" }}>
                                     {game.descriptionShortTr}
                                 </p>
-                                <a
-                                    href={game.playLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block mt-3 px-4 py-2 rounded-lg text-center"
-                                    style={{
-                                        backgroundColor: "rgb(245,215,150)",
-                                        color: "rgb(50,20,100)",
-                                        fontWeight: "bold",
-                                    }}
-                                >
-                                    Google Play'de Oyna
-                                </a>
                                 <Link
                                     to={game.routeToPageTr}
                                     className="block mt-3 px-4 py-2 rounded-lg text-center"
@@ -67,19 +54,6 @@ function GamesTr() {
                                 <p className="text-sm mb-4" style={{ color: "rgb(245,215,150)" }}>
                                     {game.descriptionShortTr}
                                 </p>
-                                <a
-                                    href={game.playLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-4 py-2 mb-2 rounded-lg transition"
-                                    style={{
-                                        backgroundColor: "rgb(245,215,150)",
-                                        color: "rgb(50,20,100)",
-                                        fontWeight: "bold",
-                                    }}
-                                >
-                                    Google Play'de Oyna
-                                </a>
                                 <Link
                                     to={game.routeToPageTr}
                                     className="px-5 py-2 rounded-lg transition"
